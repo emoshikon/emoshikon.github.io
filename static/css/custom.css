@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Sketch');
+#banner {
+  background-position: center bottom;
+}
+#banner h1 {
+  font-family: 'Londrina Sketch', cursive;
+}
