@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Project Big-Father v1 - The Thug Life of Moshik Levin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="http://moshiklevin.com/posts/2018/Jun/20/project-big-father-v1/">
+
+        <meta name="author" content="Moshik" />
+        <meta name="description" content="Building a RasPi-based baby monitor" />
+
+        <meta property="og:site_name" content="The Thug Life of Moshik Levin" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Project Big-Father v1"/>
+        <meta property="og:url" content="http://moshiklevin.com/posts/2018/Jun/20/project-big-father-v1/"/>
+        <meta property="og:description" content="Building a RasPi-based baby monitor"/>
+        <meta property="article:published_time" content="2018-06-20" />
+            <meta property="article:section" content="posts" />
+            <meta property="article:author" content="Moshik" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://moshiklevin.com/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+    <link href="http://moshiklevin.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://moshiklevin.com/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://moshiklevin.com/theme/css/style.css" type="text/css"/>
+        <link href="http://moshiklevin.com/static/css/custom.css" rel="stylesheet">
+
+        <link href="http://moshiklevin.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="The Thug Life of Moshik Levin ATOM Feed"/>
+
+
+
+        <link href="http://moshiklevin.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate"
+              title="The Thug Life of Moshik Levin posts ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://moshiklevin.com/" class="navbar-brand">
+The Thug Life of Moshik Levin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://moshiklevin.com/about/">
+                             About
+                          </a></li>
+                         <li><a href="http://moshiklevin.com/links/">
+                             Links
+                          </a></li>
+                         <li><a href="http://moshiklevin.com/cv/">
+                             CV
+                          </a></li>
+                        <li class="active">
+                            <a href="http://moshiklevin.com/category/posts.html">Posts</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("http://moshiklevin.com/images/banner.jpg");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>The Thug Life of Moshik Levin</h1>
+		</div>
+	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-sm-push-3">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://moshiklevin.com/posts/2018/Jun/20/project-big-father-v1/"
+                       rel="bookmark"
+                       title="Permalink to Project Big-Father v1">
+                        Project Big-Father v1
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-06-20T22:23:00-04:00"> Wed 20 June 2018</time>
+    </span>
+
+
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>My baby was 6 months old, and we all got along just fine without any fancy baby-monitors. We had an audio one, a very basic model, that we've been using for a while, but we gave it up the moment we lost one of its chargers. Let's face it, with my paycheck you won't find a apartment in NYC that is big enough to be needing such amplification.</p>
+<p>Having said that, I did wish to spy a bit on my baby, without walking over to the nursery and taking the risk of causing the hardwood floor to squeak. Buying a video-monitor doesn't feel right to me for multiple reasons: (1) it feels like an overkill, (2) I'll despise myself for buying an expensive one, or I'll be frustrated from a cheap one, &amp; (3) those monitors are a huge security breach. So why not building one by myself? Because it will drain my time and won't save me any money. At best, I'll be proud of myself and end up with a unique tiny feature, which I'll need to work too hard to achieve. It doesn't seem that way in the beginning, but deep down I know I'll be wasting a lot of time in the process. With a newborn now, I don't have any time to spare. </p>
+<p>All of those are the perfect conditions for me to be absentminded and go for it.</p>
+<p>Enters <strong>Project Big-Father</strong>! Let's use a Raspberry Pi with a camera. I will show you what I bought and how I installed it all</p>
+<h1>Steps to reproduce</h1>
+<h2>Shopping List</h2>
+<ol>
+<li><a href="http://www.microcenter.com/product/486575/Zero_W">Raspberry Pi Zero W</a></li>
+<li><a href="http://www.microcenter.com/product/486577/Official_Raspberry_Pi_Zero_Case">Raspberry Pi Zero Case</a></li>
+<li><a href="http://www.microcenter.com/product/486146/16GB_microSDHC_Class_10_Flash_Memory_Card">16GB microSDHC Flash Memory Card</a></li>
+<li><a href="http://www.microcenter.com/product/465935/Raspberry_Pi_Camera_Module_V2">Raspberry Pi Camera Module V2</a></li>
+<li><a href="https://www.microcenter.com/product/486582/525v-24a-wall-power-supply-for-raspberry-pi-and-asus-tinker-board">Power supply</a></li>
+</ol>
+<p><strong>Optional:</strong>
+<em> I took a used stuffed animal, to hide the camera inside and make it less threatening to my baby
+ * I needed a <a href="https://www.ebay.com/itm/90-Degree-Angle-6FT-Fast-Charge-Micro-USB-Cable-Rapid-Power-Sync-Cord-Charger-L/311944462646">90° angled USB cable</a> to pass through the back of the toy
+ * So now I needed a <a href="https://www.ebay.com/itm/5V-2A-Micro-USB-Charger-Adapter-Cable-Power-Supply-for-Raspberry-Pi-B-B-US-Plug/252478204105">new power supply</a>
+</em> You also have the option to buy the <a href="http://www.microcenter.com/product/465936/raspberry_pi_pinoir_camera_module_v2">Infrared camera module (NoIR)</a>, aka having Night Vision. You will then need to buy few LEDs that will project the IR light. I avoided that to keep it all simple for now</p>
+<h2>Step 1 - Set up Raspberry</h2>
+<p>The internet is full of detailed manuals that leads you through each step, so I'm keeping my instructions a bit abridged:
+1. Install Raspbian. I chose the Lite version, since I don't need a desktop for this project. I prefer to just <a href="https://www.raspberrypi.org/documentation/installation/noobs.md">install NOOBS</a>
+1. Assemble everything together. See two images of how the box should look like
+1. Run <code>sudo apt-get update &amp;&amp; sudo apt-get -y dist-upgrade</code> to make sure all packages are on their latest version @TODO better commands
+1. Run <code>sudo raspi-config</code> to do some housekeeping:
+ 1. <code>8 Update</code>: just to make sure you're using the latest
+ 1. <code>1 Change User Password</code>: replace the default password, for better security
+ 1. <code>2 Network Options ~&gt; N1 Hostname</code>: change the hostname to better recognize the server
+ 1. <code>2 Network Options ~&gt; N2 Wi-fi</code>: in case you haven't configured wifi when installing via NOOBS
+ 1. <code>4 Localisation Options ~&gt; Change Locale</code>: uncheck "en_GB" and check "en_US.UTF-8" in both screens to localize it. If you don't, some keyboard keys won't match correctly
+ 1. <code>5 Interface Options</code>: enable <code>P1 Camera</code> &amp; <code>P2 SSH</code></p>
+<h2>Step 2 - Install Camera Software</h2>
+<h3>Test Camera</h3>
+<p>After enabling the camera, you can now test it via command-line. Here are few options:
+1. With a monitor, run <code>raspistill -f</code> to view what the camera is seeing in fullscreen
+1. If you ssh'ed, you can't view unless you logged thru X11. So run <code>raspistill -o test_camera.jpg</code> to write to a file. <code>scp</code> it back to your computer to view it</p>
+<h3>Implement in Python</h3>
+<p>Now you need some software to capture and livestream the video. I found few ready-made solutions, like <a href="https://opencv.org/">OpenCV</a> (<a href="https://www.pyimagesearch.com/2015/03/30/accessing-the-raspberry-pi-camera-with-opencv-and-python/">tutorial</a>) or <a href="https://motion-project.github.io/">Motion</a> (<a href="https://www.bouvet.no/bouvet-deler/utbrudd/building-a-motion-activated-security-camera-with-the-raspberry-pi-zero">tutorial</a>). I was leaning towards Motion, given how simple it looks after few minutes of installing and configurations. But I wanted to go with the leanest solution, and sometimes it is more fun to go low level, and the docs for the Python <code>picamera</code> library seemed so easy...</p>
+<ol>
+<li>Since I installed the Lite version of Raspbian Jessie, first thing is to install the python module<br>
+<code>sudo apt-get install python3-picamera</code></li>
+<li>The <code>picamera</code> docs contain a receipt for <a href="https://picamera.readthedocs.io/en/release-1.13/recipes2.html#web-streaming">Web Streaming</a>. Just copy-paste it and run the script</li>
+<li>I wanted to keep it simple, so I haven't tried using the <a href="https://github.com/waveform80/pistreaming/">pistreaming</a> library, recommended by that receipt</li>
+<li>Go to http://your-pi-address:8000/ (or <a href="">http://&lt;hostname>.local:8000/</a>) on your phone and you can watch your camera stream! but we still have one problem:</li>
+<li>If you test this when your baby is sleeping, with very little light, you will probably just see a black screen. The solution (which took hours to research) is to have the highest exposure possible:</li>
+<li>Set the highest ISO</li>
+<li>Adjust Brightness &amp; Contrast a bit to lighten up the image</li>
+<li>Add some sleep before starting the recording, to give the sensors the time to adjust to the low-light conditions</li>
+<li>Set <code>exposure_mode</code> to 'off', which "<em>...locks the analog (and digital) gains at their current values...</em>"</li>
+</ol>
+<p><strong>Revised Code:</strong></p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">picamera</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">socketserver</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Condition</span>
+<span class="kn">from</span> <span class="nn">http</span> <span class="kn">import</span> <span class="n">server</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">PAGE</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">&lt;html&gt;</span>
+<span class="s2">&lt;head&gt;</span>
+<span class="s2">&lt;title&gt;picamera MJPEG streaming demo&lt;/title&gt;</span>
+<span class="s2">&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">&lt;h1&gt;PiCamera MJPEG Streaming Demo&lt;/h1&gt;</span>
+<span class="s2">&lt;img src=&quot;stream.mjpg&quot; width=&quot;640&quot; height=&quot;480&quot; /&gt;</span>
+<span class="s2">&lt;/body&gt;</span>
+<span class="s2">&lt;/html&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">class</span> <span class="nc">StreamingOutput</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">condition</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">buf</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">buf</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xd8</span><span class="s1">&#39;</span><span class="p">):</span>
+            <span class="c1"># New frame, copy the existing buffer&#39;s content and notify all</span>
+            <span class="c1"># clients it&#39;s available</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+            <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">notify_all</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">StreamingHandler</span><span class="p">(</span><span class="n">server</span><span class="o">.</span><span class="n">BaseHTTPRequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">do_GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">301</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Location&#39;</span><span class="p">,</span> <span class="s1">&#39;/index.html&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="s1">&#39;/index.html&#39;</span><span class="p">:</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">PAGE</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;text/html&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="s1">&#39;/stream.mjpg&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Cache-Control&#39;</span><span class="p">,</span> <span class="s1">&#39;no-cache, private&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Pragma&#39;</span><span class="p">,</span> <span class="s1">&#39;no-cache&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;multipart/x-mixed-replace; boundary=FRAME&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                    <span class="k">with</span> <span class="n">output</span><span class="o">.</span><span class="n">condition</span><span class="p">:</span>
+                        <span class="n">output</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+                        <span class="n">frame</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">frame</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;--FRAME</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;image/jpeg&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s1">&#39;Removed streaming client </span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">client_address</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">send_error</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">StreamingServer</span><span class="p">(</span><span class="n">socketserver</span><span class="o">.</span><span class="n">ThreadingMixIn</span><span class="p">,</span> <span class="n">server</span><span class="o">.</span><span class="n">HTTPServer</span><span class="p">):</span>
+    <span class="n">allow_reuse_address</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">daemon_threads</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">with</span> <span class="n">picamera</span><span class="o">.</span><span class="n">PiCamera</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;640x480&#39;</span><span class="p">,</span> <span class="n">framerate</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span> <span class="k">as</span> <span class="n">camera</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">StreamingOutput</span><span class="p">()</span>
+    <span class="n">camera</span><span class="o">.</span><span class="n">iso</span> <span class="o">=</span> <span class="mi">1600</span>
+    <span class="n">camera</span><span class="o">.</span><span class="n">brightness</span> <span class="o">=</span> <span class="mi">60</span>
+    <span class="n">camera</span><span class="o">.</span><span class="n">contrast</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">camera</span><span class="o">.</span><span class="n">exposure_mode</span> <span class="o">=</span> <span class="s1">&#39;off&#39;</span>
+    <span class="n">camera</span><span class="o">.</span><span class="n">start_recording</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;mjpeg&#39;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">address</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">)</span>
+        <span class="n">server</span> <span class="o">=</span> <span class="n">StreamingServer</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">StreamingHandler</span><span class="p">)</span>
+        <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">camera</span><span class="o">.</span><span class="n">stop_recording</span><span class="p">()</span>
+</pre></div>
+
+
+<h3>Make It Run On Startup</h3>
+<p>You need your web service to run on start. A quick way to do that is to <code>sudo nano /etc/rc.local</code> and add <code>python3 /home/pi/&lt;your_script&gt;.py &amp;</code> in the bottom, before the <code>exit 0</code></p>
+<h2>Step 3 - Hide The Camera</h2>
+<p>I'm not sure it's really needed, but still I wanted to hide the camera to make it less threatening. I took a used stuffed octopus that was laying around, made an incision along its bottom to make the camera look down, passed the power cord through its back, and hung it all above the bed. See pictures:</p>
+<p><img alt="Naive Octopus" src="http://moshiklevin.com/images/bigfather_octopus1.jpg"></p>
+<p><img alt="Octopus hanging above the crib" src="http://moshiklevin.com/images/bigfather_octopus2.jpg"></p>
+<h1>If I Had More Time</h1>
+<p>Here's what I plan for next versions:
+1. Add a thermometer to track the temperature and humidity over time
+1. Add a speaker to play lullabies 
+1. Add microphone to stream audio, and hopefully later play with Google's AIY
+1. Add an LCD that will show all kind of shapes given some voice activations</p>
+<h1>References</h1>
+<ul>
+<li>Great post, where I learned most of the basics about how to install the camera: <a href="https://kamranicus.com/guides/raspberry-pi-3-baby-monitor">Building a Raspberry Pi 3 Baby Monitor</a></li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 col-sm-pull-9" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://github.com/emoshikon/"><i class="fa fa-github-square fa-lg"></i> GitHub</a></li>
+    <li class="list-group-item"><a href="http://twitter.com/MoshikLevin"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/moshelevin/"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+    <li class="list-group-item"><a href="http://medium.com/@MoshikLevin"><i class="fa fa-medium fa-lg"></i> Medium</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="http://moshiklevin.com/posts/2018/Jun/20/project-big-father-v1/">Project Big-Father v1</a></li>
+    <li class="list-group-item"><a href="http://moshiklevin.com/posts/2018/May/21/first-post/">Nothing To See Here, Move Along Folks</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2018 Moshik
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://moshiklevin.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://moshiklevin.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://moshiklevin.com/theme/js/respond.min.js"></script>
+
+    <script src="http://moshiklevin.com/static/js/custom.js"></script>
+
+    <script src="http://moshiklevin.com/theme/js/bodypadding.js"></script>
+
+
+</body>
+</html>
